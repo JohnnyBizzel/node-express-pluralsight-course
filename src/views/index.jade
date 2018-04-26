@@ -1,0 +1,25 @@
+html
+    head
+        //- bower:css
+        link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/lib/font-awesome/css/font-awesome.min.css')
+        //- endbower
+        //- bower:js
+        script(src='/lib/jquery/dist/jquery.js')
+        script(src='/lib/bootstrap/dist/js/bootstrap.js')
+        //- endbower
+        //- inject:css
+        
+        link(rel="stylesheet", href="/public/css/styles.css")
+        
+        //- endinject
+        //- inject:js
+        
+        script(src="/public/js/app.js")
+        
+        //- endinject
+        title App
+    body
+        h1 Jade App
+        p
+            h3 Sub heading
