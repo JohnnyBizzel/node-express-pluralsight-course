@@ -12,7 +12,9 @@ var dbConnection = mysql.createConnection({
 //   password : process.env.LOCAL_PWD,
 //   database : 'c9'
 // });
-    
+// Note the db connection needs to be allowed by my hosting
+// Replace the @'localhost' with the glitch aws server link on Remote access
+
 dbConnection.connect(function(err) {
     console.log('db connection');
     if (err) throw err;

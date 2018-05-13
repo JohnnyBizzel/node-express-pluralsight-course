@@ -3,24 +3,6 @@ var adminRouter = express.Router();
 // var mongoDb = require('mongodb').MongoClient;
 
 var router = function(nav) {
-    
-    // var myBooks = [
-    // {
-    //     title: "War and Peace",
-    //     author: "Lev Tolstoy",
-    //     read: false
-    // },
-    // {
-    //     title: "Martin Chuzzlewit",
-    //     author: "Charles Dickens",
-    //     read: false
-    // },
-    // {
-    //     title: "Charlie and the Chocolate Factory",
-    //     author: "Roald Dahl",
-    //     read: true
-    // }];
-    
     adminRouter.route('/addBooks')
         .get(function (req, res){
             
@@ -36,8 +18,8 @@ var router = function(nav) {
             //   });
 
             // });
-            
-            res.send('insert book into MongoDb');
+            // TODO
+            res.send('insert book into Db');
         });
     return adminRouter;
 };

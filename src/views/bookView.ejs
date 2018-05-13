@@ -1,32 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Storystrap Template</title>
-		<meta name="generator" content="Bootply" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<!--bower:css-->
-		<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
-		<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
-		<!--endbower-->
-		<!--inject:css -->
-		<link rel="stylesheet" href="/public/css/styles.css">
-		<!--endinject-->
-		<!--inject:js -->
-		<script src="/public/js/app.js"></script>
-		<!--endinject-->
-		<!--bower:js-->
-		<script src="/lib/jquery/dist/jquery.js"></script>
-		<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
-		<!--endbower-->
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
-	</head>
+ <%- include('header-tags') %>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
   <div class="container">
@@ -106,18 +80,18 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="<%=book.book.image_url%>" src="" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img src="<%=book.book.image_url%>"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3>Title: <%=book.title%></h3>
+              <h3>Title: <%=book.book.title%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=book.author%></span></h4>
+                  <h4><span class="label label-default"><%=(main_author)%></span></h4>
                   
                   </div>
                 <div class="col-xs-3"></div>
               </div>
-              <br><%=book.book.description%>
+              <br><%-book.book.description%>
               <br>
             </div>
           </div>
