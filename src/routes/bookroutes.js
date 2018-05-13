@@ -10,24 +10,6 @@ var router = function(navig) {
     
     bookRouter.use(bookController.middleware);
     
-    // // dummy books list for testing
-    // var libraryBooks = [
-    // {
-    //     title: "War and Peace",
-    //     author: "Lev Tolstoy",
-    //     read: false
-    // },
-    // {
-    //     title: "Martin Chuzzlewit",
-    //     author: "Charles Dickens",
-    //     read: false
-    // },
-    // {
-    //     title: "Charlie and the Chocolate Factory",
-    //     author: "Roald Dahl",
-    //     read: true
-    // }];
-    
     // Set up DB
 
     /* Authorization for all routes (moved to controller) */
@@ -41,10 +23,20 @@ var router = function(navig) {
 
     
     bookRouter.route('/')
-    .get(bookController.getIndex);
-    
+      .get(bookController.getIndex);
+
+    bookRouter.route('/user1')
+      .get(bookController.getBooksForUserId);
+  
     bookRouter.route('/:id')
-        .get(bookController.getById);
+      .get(bookController.getById);
+  
+    // bookRouter.route('/mybooks')     
+    //     .get(function (req, res){
+    //         res.render('myBooks');
+    //     });
+  
+
         
     return bookRouter;
 };
